@@ -13,6 +13,10 @@ public class SecurityTokenConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     protected JwtConfiguration jwtConfiguration;
 
+    public SecurityTokenConfig(JwtConfiguration jwtConfiguration) {
+        this.jwtConfiguration = jwtConfiguration;
+    }
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
