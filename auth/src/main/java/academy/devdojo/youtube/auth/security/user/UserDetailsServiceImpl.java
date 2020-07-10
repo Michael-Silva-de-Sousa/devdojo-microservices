@@ -22,7 +22,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username){
-        //log.info("Procurando no Banco o usuário de nome '{}'", username);
+        log.info("Procurando no Banco o usuário de nome '{}'", username);
         ApplicationUser applicationUser = applicationUserRepository.findByUsername(username);
 
         if(applicationUser == null){
